@@ -102,7 +102,7 @@ form {
 
 .total-score {
     color: white;
-    background-color: rgba($color: blue, $alpha: 0.6);
+    background-color: rgba($color: blue, $alpha: 0.3);
     padding: 10px 20px;
     font-size: 24px;
     font-weight: bold;
@@ -115,6 +115,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 
 }
 
