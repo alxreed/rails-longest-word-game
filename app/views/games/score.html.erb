@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Result</h1>
+    <div class="grosse-div">
+        <% if @result == "is a valid English word !" %>
+            <p class="score"><strong>Congratulations !</strong> <%= @word.upcase %> <%= @result %></p>
+        <% elsif @result == "does not seem to be a valid English word..." %>
+            <p class="score">Sorry but <%= @word.upcase %> <%= @result %></p>
+        <% elsif @result == "can't be built out of" %>
+            <p class="score">Sorry but <strong><%= @word.upcase %></strong> <%= @result %> <strong><%= @letters.join(",") %></strong></p>
+        <% end %>
+        <div class="total-score"><p>Total score: <%= @score %></p></div>
+        <form action="/new" method="get">
+            <input type="hidden" name="score" value="<%= @score %>">
+            <input type="submit" class="btn2" value="Play again">
+        </form>
+    </div>
+</div>
+
